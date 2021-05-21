@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 14</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: paleturquoise;
+            text-align: center;
+        }
+        h1{
+            color: darkblue;
+        }
+        nav{
+            height: 40px;
+            background-color: royalblue;
+            display: flex;
+            align-items: center;
+            color: white;
+            box-shadow: 0px 2px 4px blue;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            margin-left: auto;
+        }
+        h2{
+            margin-left: 10px;
+        }
+        li{
+            padding-left: 10px;
+            padding-right: 10px;
+            border-left: 2px dotted white;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .gallery{
+            flex: 1;
+            background: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1.00xw:0.669xh;0,0.190xh&resize=1200:*);
+            background-size: 100% 100%;
+        }
+        .content{
+            flex: 1;
+            background-color: bisque;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            width: 350px;
+            height: 350px;
+            margin: auto;
+            margin-top: 40px;
+            padding: 20px;
+        }
+    </style>
+</head>
+    <nav>
+        <a href=""><h2>Doggy.Com</h2></a>
+        <ul>
+            <a href=""><li>Home</li></a>
+            <a href=""><li>About</li></a>
+            <a href=""><li>Contact</li></a>
+        </ul>
+    </nav>
+    <div class="main">
+        <div class="gallery">
+        </div>
+        <div class="content">
+            <form action="">
+                <br><br>
+                <label for="">Name:</label>
+                <input type="text" name="" id=""><br><br>
+                <label for="">Phone Number:</label>
+                <input type="text" name="" id=""><br><br>
+                <input type="submit" name="" id="">
+        </form>
+        </div>
+    </div>
+   
+    
+    
+</body>
+</html>
