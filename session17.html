@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 17</title>
+    <style>
+        *{
+            box-sizing:border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background: url(https://cdn.pixabay.com/photo/2020/03/14/17/19/flower-4931280__480.jpg);
+            background-size: cover;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+        }
+        h1{
+            color: brown;
+        }
+        .content{
+            width: 80vw;
+            height: 80vh;       
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            border: 20px outset red;
+            box-shadow: 0px 0px 10px black;
+
+        }
+        h2{
+            margin: auto;
+            background-color: brown;
+            color: white;
+            box-shadow: 0px 10px 0px red;
+        }
+        .details{
+            flex: 1;
+            background: url(https://cdn.pixabay.com/photo/2020/03/30/18/03/flower-4985011__480.png);
+        }
+        .education{
+            flex: 1;
+            background: url(https://cdn.pixabay.com/photo/2020/03/30/18/03/flower-4985011__480.png);
+        }
+        .achievements{
+            flex: 1;
+            background: url(https://cdn.pixabay.com/photo/2020/03/30/18/03/flower-4985011__480.png);
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            float: left;
+            margin-top:20px ;
+            margin-left: 20px;
+            background-color: white;
+            padding: 10px;
+
+        }
+        p{
+            text-align: left;
+            padding-left: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Personal Portfolio</h1>
+    </header><br><br>
+    <div class="content">
+        <div class="details">
+            <h2>Personal Details</h2>
+            <img src="jay.jpg" alt="">
+            <p><br>
+                <p><b>Name:</b>Jay<br><br>
+                    <b>Address:</b> Bengalore<br><br>
+                <b>Phone No: </b>1122342341<br><br>
+            <b>Email:</b>jay@gmail.com</p>
+            </p>
+        </div>
+        <div class="education">
+            <h2>Education Qualifications</h2>
+            <p><br>
+                <p><b>Class X</b> 92%<br><br>
+                    <b>Class 12</b> 87%<br><br>
+                <b>Graduation</b> 84.4%<br><br>
+            <b>Post Graduation</b> 84.4%</p>
+            </p>
+        </div>
+        <div class="achievements">
+            <h2>Personal Achievements</h2>
+            <p><br>
+                <p>1st class 1st in MCA<br><br>
+                    1st class 1st in BCA<br><br>
+                </p>
+            </p>
+        </div>
+    </div>
+    
+</body>
+</html>
