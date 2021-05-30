@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 18</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background: url(https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727__480.jpg);
+            background-size: 100% 100%;
+            text-align: center;
+            font-family: 'roboto condensed','san serif';
+        }
+        h1{
+            text-align: left;
+            margin-left: 20px;
+            margin-top: 10px;
+            color: snow;
+            text-shadow: 0px 2px 2px black;
+        }
+        b{
+            font-size: 48px;
+        }
+        form{
+            width: 350px;
+            height: 640px;
+            background-color: white;
+            margin: auto;
+            margin-top: 40px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px black ;
+            border: 10px solid dodgerblue;
+        }
+        #name, #email,#from, #to, #date, #submit{
+            width: 95%;
+            padding: 10px;
+            border: 1px solid rgba(0,0,0,.2);
+
+        }
+        #submit{
+            background-color: dodgerblue;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        #submit:active{
+            background-color: blue;
+        }
+        fieldset{
+            border: 1px solid rgba(0,0,0,.2);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Just Travel! <b>&#9992;</b></h1> 
+    </header>
+    <form action="https://www.goibibo.com/">
+        <fieldset>
+            <legend>Book Your Tickets</legend>
+            <input type="text" name="" id="name" placeholder="Enter Name" required><br><br>
+            <input type="email" name="" id="email" placeholder="Enter Email" required><br><br>
+            <label for="">From</label>
+            <select name="" id="from" required>
+                <option value="">Mumbai</option>
+                <option value="">Chennai</option>
+                <option value="">Delhi</option>
+                <option value="">Kolkata</option>
+                <option value="">Bangalore</option>
+            </select><br><br>
+            <label for="">To</label>
+            <select name="" id="to" required>
+                <option value="">Mumbai</option>
+                <option value="">Chennai</option>
+                <option value="">Delhi</option>
+                <option value="">Kolkata</option>
+                <option value="">Bangalore</option>
+            </select><br><br>
+            <label for="">No. of Travellers</label>
+            <select name="" id="to" required>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+            </select><br><br>
+            <label for="">Journey Date</label>
+            <input type="date" name="" id="date" required><br><br>
+            <label for="">Return Date</label>
+            <input type="date" name="" id="date" required><br><br>
+            <input type="submit" name="" id="submit"><br><br>
+        </fieldset>
+    </form>
+</body>
+</html>
