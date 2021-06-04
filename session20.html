@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 20</title>
+    <style>
+        body{
+            background-color: skyblue;
+            text-align: center;
+        }
+        #myCanvas{
+            border: 4px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML Canvas</h1>
+    </header>
+    <canvas id="myCanvas" height="400" width="400">
+
+    </canvas><br>
+    <button onclick="line()">Line</button>
+    <button>Circle</button>
+    <button>Rectangle</button>
+    <button>Text</button>
+
+    
+</body>
+<script>
+    var draw = document.getElementById("myCanvas");
+    
+    function line(){
+    var line = draw.getContext("2d");
+    line.moveTo(0,0);
+    line.lineTo(400,400);
+    line.lineWidth = 3;
+    line.strokeStyle = "orange";
+    line.stroke();
+    }
+
+    var box = draw.getContext("2d");
+
+    box.rect(50,100,300,200);
+    box.stroke();
+    box.fillStyle = "red";
+    box.fill();
+
+    var circle = draw.getContext("2d");
+
+    circle.beginPath();
+    circle.arc(200,200,50,0,2*Math.PI);
+    circle.stroke()
+    circle.fillStyle = "orange";
+    circle.fill();
+
+    var myName = draw.getContext("2d");
+
+    myName.font = "24px Arial";
+    myName.strokeText("Rivan",170,205);
+    myName.fillStyle = "blue";
+    myName.fillText("Rivan",170,205);
+</script>
+</html>
