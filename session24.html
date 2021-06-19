@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesssion 24</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #game {
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #soccer,
+        #cricket,
+        #basketball {
+            width: 300px;
+            height: 250px;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 200px;
+            height: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Drag and Drop API</h1>
+    </header>
+    <h2 id="result"></h2>
+    <div id="game">
+        <div id="soccer" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Soccer</h3>
+        </div>
+        <div id="cricket" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Cricket</h3>
+        </div>
+        <div id="basketball" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Basketball</h3>
+        </div>
+    </div>
+    <br>
+    <img ondragstart="drag(event)" draggable="true" id="drag"
+        src="https://cdn.pixabay.com/photo/2018/06/12/19/59/football-3471371__340.jpg" alt="">
+
+</body>
+<script>
+    function drag(ev) {
+        ev.dataTransfer.setData("data", ev.target.id);
+    }
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    function drop(ev) {
+        ev.preventDefault();
+        if (ev.path[0].id == "soccer") {
+            document.getElementById("result").innerText =
+                "Correct Answer";
+        }
+        else {
+            document.getElementById("result").innerText =
+                "Wrong Answer";
+        }
+        var data = ev.dataTransfer.getData("data");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+
+</html>
