@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesssion 24</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #game {
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #pele,
+        #cafu,
+        #yashin {
+            width: 300px;
+            height: 250px;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 200px;
+            height: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Drag and Drop API</h1>
+        <h2>Which Player Has Won The Most Soccer World Cup?</h2>
+    </header>
+    <h2 id="result"></h2>
+    <div id="game">
+        <div id="pele" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Pele</h3>
+        </div>
+        <div id="cafu" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Cafu</h3>
+        </div>
+        <div id="yashin" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Yashin</h3>
+        </div>
+    </div><br>
+    <img ondragstart="drag(event)" draggable="true" id="drag"
+        src="https://e00-marca.uecdn.es/assets/multimedia/imagenes/2018/07/14/15315983620308.jpg" alt="">
+
+    <br><br>
+    <button><a href="result.html">Result</a></button>
+
+</body>
+<script>
+    var score = localStorage.result;
+    score = parseInt(score);
+    function drag(ev) {
+        ev.dataTransfer.setData("data", ev.target.id);
+    }
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    function drop(ev) {
+        ev.preventDefault();
+        if (ev.path[0].id == "pele") {
+            console.log(ev.path[0].id);
+            document.getElementById("result").innerText =
+                "Correct Answer";
+            score = score + 1
+            localStorage.result = score;
+        }
+        else {
+            console.log(ev.path[0].id);
+            document.getElementById("result").innerText =
+                "Wrong Answer";
+        }
+        var data = ev.dataTransfer.getData("data");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+
+</html>

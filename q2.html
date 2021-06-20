@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesssion 24</title>
+    <style>
+        body {
+            background-color: skyblue;
+            text-align: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        #game {
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #erlinghaaland,
+        #jadensancho,
+        #lewadonski {
+            width: 300px;
+            height: 250px;
+            border: 1px solid black;
+        }
+
+        img {
+            width: 200px;
+            height: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML Drag and Drop API</h1>
+        <h2>Which Player Is This?</h2>
+    </header>
+    <h2 id="result"></h2>
+    <div id="game">
+        <div id="lewadonski" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Lewadonski</h3>
+        </div>
+        <div id="erlinghaaland" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Erling Haaland</h3>
+        </div>
+        <div id="jadensancho" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <h3>Jaden Sancho</h3>
+        </div>
+    </div>
+    <br>
+    <img ondragstart="drag(event)" draggable="true" id="drag"
+        src="https://images.daznservices.com/di/library/GOAL/36/af/erling-haaland-borussia-dortmund-2019-20_2ae2yy6yln371gac1q9enxn2v.jpg?t=1957858928&quality=60&h=300"
+        alt="">
+    <br><br>
+    <button><a href="q3.html">Next Question</a></button>
+
+</body>
+<script>
+    var score = localStorage.result;
+    score = parseInt(score);
+    function drag(ev) {
+        ev.dataTransfer.setData("data", ev.target.id);
+    }
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+    function drop(ev) {
+        ev.preventDefault();
+        if (ev.path[0].id == "erlinghaaland") {
+            console.log(ev.path[0].id);
+            document.getElementById("result").innerText =
+                "Correct Answer";
+            score = score + 1
+            localStorage.result = score;
+        }
+        else {
+            console.log(ev.path[0].id);
+            document.getElementById("result").innerText =
+                "Wrong Answer";
+        }
+        var data = ev.dataTransfer.getData("data");
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+
+</html>
