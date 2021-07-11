@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-image:linear-gradient(skyblue , mediumblue);
+            width: 100vw;
+            height: 100vh;
+
+        }
+        nav {
+            height: 40px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            color: black;
+            box-shadow: 0px 2px 3px rgb(0, 0,0,.7);
+            border: black 3px solid;
+        }
+    ul {
+       display: flex;
+       list-style: none;
+       margin-left: auto;
+       align-items: center;
+        }
+        a {
+            padding-left:20px;
+            padding-right: 10px;
+          text-decoration: none;
+          
+        }
+        #Im {
+          display: flex;
+          width: 100vw;
+          height: 70vh;
+      }
+        img {
+            border-right: 3px solid rgb(0,0,0,.3);
+           flex: 1;
+           width: 55%;
+           margin-right: 10px;
+           margin-left: 10px;
+           
+        }
+     
+      #form {
+          background-color: white;
+      
+        flex: 1;
+        margin-right: 10px;
+        text-align: center;
+
+      }
+      select {
+          font-size: 20px;
+           
+      }
+    #pname {
+    text-align: left;
+    }
+    #cart {
+        width: 70px;
+      margin-right: 10px;
+        display: flex;
+        margin-left: 10px;
+        margin-top: 20px;
+   
+    }
+    #counter {
+        width: 30px;
+        
+    }
+    h2 {
+        color: red;
+    }
+    button {
+        font-size: 20px;
+        background-image: linear-gradient(skyblue ,mediumblue);
+        height: 50px;
+        width:150px;
+        
+    }
+    h1 {
+        margin-top: 20px;
+    }
+    </style>
+</head>
+<body>
+     <nav>
+    <h2> BuyElectric.com</h2>
+     <ul>
+      <a href="Ecom.html">   <li>  Home  </li></a>  
+       <a href="eabout.html">  <li>About</li></a> 
+       
+       <li id="cart"> Cart &equals; &nbsp; <p id="counter"></p></li>
+       
+    </ul>
+ </nav>
+ <h1  id="pname">Asus Vivo Aio </h1> <br> <br>
+ <div id="Im"><img src="https://images-na.ssl-images-amazon.com/images/I/71Dm%2BU83pTL._AC_SL1500_.jpg" alt="">
+ <div id="form" action=""> <h1 id="pname">
+  
+    ASUS AiO All-in-One 23.8” FHD Anti-Glare Display Desktop PC | AMD Ryzen 3 3250U Processor | 16GB DDR4 RAM | 512SSD | Windows 10 Home | Gold | with Woov Accessory Bundle </h1> <br> <br> <select name="" id="from" required> 
+    
+    <option value="" disabled> Quantity</option>
+    <option value="">1</option>
+    <option value="">2</option>
+    <option value="">3 </option>
+
+    </select> <br> <br>
+<select name="" id="">
+    <option value="" disabled>Color</option>
+    <option value="">Mystic Black</option>
+    <option value="">Mystic Blue</option> 
+  
+</select> <br> <br>
+<h2>Price  - 60000 </h2> <br> <br>
+  <button onclick="counter()">Add to Cart</button> <br> <br>
+  <a href="https://www.amazon.in/ASUS-i5-10210U-Integrated-Graphics-V222FAK-WA120T/dp/B0922LFJGY/ref=sr_1_6?dchild=1&keywords=Asus+Vivo+Aio&qid=1625987322&sr=8-6"><button>Buy Now</button></a>
+</div>
+
+    </div>
+</body>
+<script>
+    var count=0;
+    function counter() {
+        count=count+1;
+       document.getElementById("counter").innerText=count;
+
+    }
+</script>
+
+</html>
