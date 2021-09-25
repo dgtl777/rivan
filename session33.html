@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 33</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: skyblue;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            animation-name: changeBackground;
+            animation-duration: 10s ;
+        }
+        @keyframes changeBackground{
+            0%{
+                background-color: black;
+            }
+            40%{
+                background-color: orange;
+            }
+            50%{
+                background-color: skyblue;
+            }
+        }
+        h1{
+            color: tomato;
+            animation-name: changeColor;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+
+        }
+        @keyframes changeColor {
+            0%{
+               color: blue; 
+            }
+            50%{ 
+                color: tomato;
+            }
+            100%{
+                color: blue;
+            }
+        }
+
+        .circle{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: yellow;
+            margin: auto;
+            animation-name: changeCircle;
+            animation-duration: 10s;
+        }
+        @keyframes changeCircle {
+            0%{
+                background-color: white;
+                margin-top: 500px;
+            }
+            40%{
+                background-color: white;
+                margin-top: 0px;
+            }
+            50%{
+                background-color: yellow;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Animation</h1>
+    </header>
+    <div class="circle">
+
+    </div>
+    
+</body>
+</html>
